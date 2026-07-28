@@ -7,7 +7,7 @@ ffbuild_enabled() {
 }
 
 ffbuild_dockerdl() {
-    default_dl .
+    echo "git clone \"$SCRIPT_REPO\" . && git pull -f"
 
     # This is where they decided to put downloads for external dependencies, so it needs to run here
     echo "./autogen.sh"
