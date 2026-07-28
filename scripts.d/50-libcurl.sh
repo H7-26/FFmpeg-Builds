@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://github.com/curl/curl.git"
-
+SCRIPT_COMMIT="master"
 
 ffbuild_depends() {
     echo base
@@ -12,6 +12,10 @@ ffbuild_depends() {
 ffbuild_enabled() {
     (( $(ffbuild_ffver) <= 801 )) && return -1
     return 0
+}
+
+ffbuild_dockerdl() {
+    echo "git clone --filter=blob:none \"$SCRIPT_REPO\" . && git checkout \"$SCRIPT_COMMIT\""
 }
 
 ffbuild_dockerbuild() {
