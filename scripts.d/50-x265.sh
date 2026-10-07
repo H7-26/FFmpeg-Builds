@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_REPO="https://github.com/Multicorewareinc/x265.git"
-SCRIPT_COMMIT="020d7054dbecfd3be8e62efe33ff8a305d41856e"
+SCRIPT_COMMIT="f2cf32d1150d535fc8917d8a28c55088ba664586"
 
 ffbuild_enabled() {
     [[ $VARIANT == lgpl* ]] && return -1
